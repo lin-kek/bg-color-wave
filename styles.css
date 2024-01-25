@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --bg-color: rgb(20, 20, 20);
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+  font-family: "Roboto", Arial, sans-serif;
+  overflow: hidden;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#tiles {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  pointer-events: none;
+}
+
+#main p {
+  font-size: 24px;
+}
+
+#main a {
+  font-size: 64px;
+  color: var(--bg-color);
+
+  pointer-events: none;
+
+  transition: transform 0.3s ease;
+}
+
+#main a:hover {
+  transform: scale(1.1);
+}
+
+#helper {
+  width: 100vw;
+  color: white;
+
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  pointer-events: none;
+
+  transition: opacity 1s ease;
+  opacity: 1;
+}
